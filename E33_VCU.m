@@ -8,7 +8,7 @@ SCS_Error_GND = ecucoder_cal(SCS_Error_GND);
 %% 加速踏板标定
 APPS_Map = [0,1000];                            %加速踏板开度
 
-APPS1_Voltage  = [496,1320];                     %加速踏板传感器1信号 单位 mV
+APPS1_Voltage  = [445,1800];                     %加速踏板传感器1信号 单位 mV
 APPS1_Voltage  = ecucoder_cal(APPS1_Voltage);    %将Voltage设为标定量
 
 APPS2_Voltage  = [1135,2710];                     %加速踏板传感器2信号 单位 mV
