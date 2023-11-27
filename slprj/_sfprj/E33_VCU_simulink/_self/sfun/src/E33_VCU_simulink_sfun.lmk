@@ -1,0 +1,62 @@
+CC     = "D:\matlab2014\sys\lcc\bin\lcc.exe"
+LD     = "D:\matlab2014\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "D:\matlab2014\sys\lcc\bin\lcclib.exe"
+CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup 
+LDFLAGS = -s -dll -L"D:\matlab2014\sys\lcc\lib" 
+LIBFLAGS = 
+
+OBJECTS = \
+	"E33_VCU_simulink_sfun.obj"\
+	"c1_E33_VCU_simulink.obj"\
+	"c3_E33_VCU_simulink.obj"\
+	"c4_E33_VCU_simulink.obj"\
+	"c5_E33_VCU_simulink.obj"\
+	"c6_E33_VCU_simulink.obj"\
+	"c8_E33_VCU_simulink.obj"\
+	"c11_E33_VCU_simulink.obj"\
+	"c13_E33_VCU_simulink.obj"\
+	"c14_E33_VCU_simulink.obj"\
+	"E33_VCU_simulink_sfun_registry.obj"\
+	"lccstub.obj"\
+	"D:\matlab2014\sys\lcc\mex\lccdef.def"\
+	"D:\matlab2014\extern\lib\win32\lcc\sf_runtime.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libmwblas.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libmx.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libmex.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libmat.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libut.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libmwmathutil.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libemlrt.lib"\
+	"D:\matlab2014\extern\lib\win32\lcc\libmwsl_log_load_blocks.lib"\
+	"D:\matlab2014\lib\win32\libippmwipt.lib"\
+
+INCLUDE_PATH= -I"D:\matlab2014\sys\lcc\include"  -I"D:\matlab2014\extern\include"  -I"D:\matlab2014\simulink\include"  -I"D:\matlab2014\stateflow\c\mex\include"  -I"D:\matlab2014\rtw\c\src"  -I"E:\WUTE\Electrical panel\23Èü¼¾\VCU\E33_VCU_1031\slprj\_sfprj\E33_VCU_simulink\_self\sfun\src" 
+ 
+
+E33_VCU_simulink_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o E33_VCU_simulink_sfun.mexw32 @E33_VCU_simulink_sfun.lmko
+E33_VCU_simulink_sfun.obj :	"E33_VCU_simulink_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "E33_VCU_simulink_sfun.c"
+c1_E33_VCU_simulink.obj :	"c1_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_E33_VCU_simulink.c"
+c3_E33_VCU_simulink.obj :	"c3_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_E33_VCU_simulink.c"
+c4_E33_VCU_simulink.obj :	"c4_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_E33_VCU_simulink.c"
+c5_E33_VCU_simulink.obj :	"c5_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_E33_VCU_simulink.c"
+c6_E33_VCU_simulink.obj :	"c6_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_E33_VCU_simulink.c"
+c8_E33_VCU_simulink.obj :	"c8_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_E33_VCU_simulink.c"
+c11_E33_VCU_simulink.obj :	"c11_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c11_E33_VCU_simulink.c"
+c13_E33_VCU_simulink.obj :	"c13_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c13_E33_VCU_simulink.c"
+c14_E33_VCU_simulink.obj :	"c14_E33_VCU_simulink.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c14_E33_VCU_simulink.c"
+E33_VCU_simulink_sfun_registry.obj :	"E33_VCU_simulink_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "E33_VCU_simulink_sfun_registry.c"
+lccstub.obj :	"D:\matlab2014\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "D:\matlab2014\sys\lcc\mex\lccstub.c"

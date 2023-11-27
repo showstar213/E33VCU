@@ -8,18 +8,18 @@ SCS_Error_GND = ecucoder_cal(SCS_Error_GND);
 %% 加速踏板标定
 APPS_Map = [0,1000];                            %加速踏板开度
 
-APPS1_Voltage  = [445,1800];                     %加速踏板传感器1信号 单位 mV
+APPS1_Voltage  = [430,1279];                     %加速踏板传感器1信号 单位 mV
 APPS1_Voltage  = ecucoder_cal(APPS1_Voltage);    %将Voltage设为标定量
 
-APPS2_Voltage  = [1135,2710];                     %加速踏板传感器2信号 单位 mV
+APPS2_Voltage  = [872,2568];                     %加速踏板传感器2信号 单位 mV
 APPS2_Voltage  = ecucoder_cal(APPS2_Voltage);    %将Voltage设为标定量
 %% 制动踏板标定
 BP_Map = [0,1000];
 
-BP_F_Voltage  = [500,2800];
+BP_F_Voltage  = [510,2800];
 BP_F_Voltage  = ecucoder_cal(BP_F_Voltage);
 
-BP_R_Voltage  = [510,1200];
+BP_R_Voltage  = [520,1200];
 BP_R_Voltage  = ecucoder_cal(BP_R_Voltage);
 %% 尾灯亮度标定
 Brk_luminance = 50;
@@ -53,11 +53,8 @@ Angle = ecucoder_cal(Angle);
 %% 整车热管理标定
 Tmanage_Map = [0,100];
 
-Accu_FAN_threshold = [25,30];
+Accu_FAN_threshold = [28,35];
 Accu_FAN_threshold = ecucoder_cal(Accu_FAN_threshold);
-
-Tail_FAN_threshold = [25,30];
-Tail_FAN_threshold = ecucoder_cal(Tail_FAN_threshold);
 
 Pump_threshold = 30;
 Pump_threshold = ecucoder_cal(Pump_threshold);

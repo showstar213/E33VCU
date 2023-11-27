@@ -1,0 +1,1861 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     E33_VCU_simulink.a2l
+ *
+ * Code generation for model "E33_VCU_simulink".
+ *
+ * Model version              : 1.70
+ * Simulink Coder version : 8.6 (R2014a) 27-Dec-2013
+ * C source code generated on : Sun Nov 26 16:56:12 2023
+ * 
+ * Target selection: ec55xx.tlc
+ * Embedded hardware selection: Freescale MPC5500
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ECUCoderProject "ECUCoder Project"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "No Comment"
+    
+    /begin MOD_PAR "No Comment"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "No Comment" 
+      BYTE_ORDER     MSB_FIRST
+    /end MOD_COMMON
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin CHARACTERISTIC
+      /* Name                   */      linear_Map
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* Memory Address         */      0x40001be4
+      /* Record Layout          */      Lookup1D_UWORD
+      /* Maxdiff                */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /begin AXIS_DESCR
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      E33_VCU_simulink_CM_uint16
+        /* Number of Axis Pts   */      2
+        /* Lower Limit          */      0
+        /* Upper Limit          */      65535
+        AXIS_PTS_REF                    linear_RR_Map
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    /begin AXIS_PTS
+      /* Name                   */      linear_RR_Map
+      /* Long Identifier        */      ""
+      /* Memory Adress          */      0x40001bec
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Number of Axis Pts     */      2
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Beep_Time
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001b98
+      /* Record Layout          */      Scalar_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Brk_luminance
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001ba0
+      /* Record Layout          */      Scalar_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      FactoryTestEnable
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c28
+      /* Record Layout          */      Scalar_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      HardBrk_luminance
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001ba8
+      /* Record Layout          */      Scalar_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Accu_FAN_threshold
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001bb0
+      /* Record Layout          */      Scalar_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Pump_threshold
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001bb8
+      /* Record Layout          */      Scalar_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Accu_FAN_Test
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c30
+      /* Record Layout          */      Scalar_ULONG
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint32
+      /* Lower Limit            */      0
+      /* Upper Limit            */      4294967295
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Radiator_FAN_Test
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c34
+      /* Record Layout          */      Scalar_ULONG
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint32
+      /* Lower Limit            */      0
+      /* Upper Limit            */      4294967295
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Tail_Light_Test
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c38
+      /* Record Layout          */      Scalar_ULONG
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint32
+      /* Lower Limit            */      0
+      /* Upper Limit            */      4294967295
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      APPS_threshold
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001bbc
+      /* Record Layout          */      Scalar_ULONG
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_ufix32_En16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535.999984741211
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      APPS1_Voltage
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001bc0
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      APPS2_Voltage
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001bc4
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      BP_F_Voltage
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001bc8
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      BP_F_threshold
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001bcc
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      BP_R_Voltage
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001bd0
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      MaxRPMchangePerSec
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001bd4
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      MaxTorqChangePerSec
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001bd6
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      SCS_Error_5V
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001bd8
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      SCS_Error_GND
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001bda
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      linear_FL_Map
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001bdc
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      linear_FR_Map
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001be0
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      linear_RL_Map
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK
+      /* Memory Address         */      0x40001be8
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+      /* Array Size             */
+      NUMBER                            2
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      BMSLedTest
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c3c
+      /* Record Layout          */      Scalar_BOOLEAN
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_boolean
+      /* Lower Limit            */      0
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      BeeperTest
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c3d
+      /* Record Layout          */      Scalar_BOOLEAN
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_boolean
+      /* Lower Limit            */      0
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      DCDC_Relay_Test
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c3e
+      /* Record Layout          */      Scalar_BOOLEAN
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_boolean
+      /* Lower Limit            */      0
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      IMDLedTest
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c3f
+      /* Record Layout          */      Scalar_BOOLEAN
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_boolean
+      /* Lower Limit            */      0
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Pump_Test
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c40
+      /* Record Layout          */      Scalar_BOOLEAN
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_boolean
+      /* Lower Limit            */      0
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      R2D_Light_Test
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001c41
+      /* Record Layout          */      Scalar_BOOLEAN
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      E33_VCU_simulink_CM_boolean
+      /* Lower Limit            */      0
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU_HvVolt
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001c74
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MaxTemp
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001c64
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS_AlmLv
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001cb4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS_Current
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001cb0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS_SoC
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001ca8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS_Voltage
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001ca4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Pwr_Lim
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001c50
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Maxchange_Lim_T
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001c60
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU_TorqCmd
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001c68
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU_SpdCmd
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      E33_VCU_simulink_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001c6c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Wheel_Angle
+      /* Long identifier        */      ""
+      /* Data type              */      SLONG
+      /* Conversion method      */      E33_VCU_simulink_CM_int32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -2147483648
+      /* Upper limit            */      2147483647
+      ECU_ADDRESS                       0x40001c44
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      McuInfoOfflineCnt
+      /* Long identifier        */      ""
+      /* Data type              */      ULONG
+      /* Conversion method      */      E33_VCU_simulink_CM_uint32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      4294967295
+      ECU_ADDRESS                       0x40001c5c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      McuStatelineCnt
+      /* Long identifier        */      ""
+      /* Data type              */      ULONG
+      /* Conversion method      */      E33_VCU_simulink_CM_uint32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      4294967295
+      ECU_ADDRESS                       0x40001c58
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS_Pos
+      /* Long identifier        */      ""
+      /* Data type              */      ULONG
+      /* Conversion method      */      E33_VCU_simulink_CM_ufix32_En16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535.999984741211
+      ECU_ADDRESS                       0x40001cc0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS1_PWR
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001cd4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS2_PWR
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001ccc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_PWR
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c9a
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      I_BAT
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c86
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      I_UBR
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c84
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      PWR_5V
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c54
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Linear_RR
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c7a
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Linear_FR
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c7e
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Linear_RL
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c7c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Linear_FL
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c80
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Angle_Vol
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001cbc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_R_Vol_In
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c94
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_R_Pos
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c96
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_F_Vol_In
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c9e
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_F_Pos
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001ca0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS1_Pos
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001cd2
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS2_Pos
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001cca
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS1_Vol_In
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001cd0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS2_Vol_In
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001cc8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPSUn_dif
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001cc6
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_Lim_T
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c9c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Dri_T_request
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      E33_VCU_simulink_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001c88
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VCUMCUCANOKK
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001c4a
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Infomation_OK
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001c82
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      State_OK
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001c4b
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS_Unreliable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001cbf
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMSInfoCnt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001cba
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMSALMCnt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001cbb
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMSMAXTCnt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001cb9
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMSMXVCnt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001cb8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      DCDC_ON
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c8a
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      DCDC_MR
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c8b
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BmsLedStat
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c8c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BeeperStat
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c8d
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ImdLedStat
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c83
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ReadyLEDstat
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c4c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      R2D_Light
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c4e
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU_Online
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c71
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      R2D_SW
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c4d
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_F_Disconnect
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001ca3
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_R_Disconnect
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c98
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS1_Disconnect
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001cd6
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS2_Disconnect
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001cce
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS_Online
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001cac
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS_OK
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001cc4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BP_F_OK
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001ca2
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU_Ready
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c70
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU_Cut
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c78
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Bad_APPAlm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c8e
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BadApp1Alm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c91
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BadApp2Alm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c90
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BadMcuAlm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c8f
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      A_level_Warn
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001cbe
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      B_level_Warn
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c92
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VehStandby
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c48
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VehReady
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      E33_VCU_simulink_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001c49
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_double
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%15.10"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_uint32
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%10.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_ufix32_En16
+      /* Long identifier        */      "Q = V*65536.000000f"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%26.16"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 65536.000000f 0.000000f 0 0 1.000000f
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_int32
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%10.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      E33_VCU_simulink_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       E33_VCU_simulink
+      /* Long identifier        */       "E33_VCU_simulink"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_Function_Call_Subsystem
+        Root_Input
+        Root_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_Function_Call_Subsystem
+      /* Long identifier        */       "E33_VCU_simulink/Function-Call Subsystem"
+      /begin SUB_GROUP
+        S1_R2D_State
+        S1_Veh_Dynamic
+        S1_Warn
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_Input
+      /* Long identifier        */       "E33_VCU_simulink/Input"
+      /begin SUB_GROUP
+        S2_Input
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_Subsystem1
+      /* Long identifier        */       "E33_VCU_simulink/Subsystem1"
+      /begin SUB_GROUP
+        S5_DCDC_Ctrl
+        S5_MCUctrl
+        S5_PanelCtrl
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_R2D_State
+      /* Long identifier        */       "E33_VCU_simulink/Function-Call Subsystem/R2D_State"
+      /begin REF_MEASUREMENT
+        APPS_OK
+        BP_F_OK
+        MCU_Ready
+        VehReady
+        VehStandby
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Veh_Dynamic
+      /* Long identifier        */       "E33_VCU_simulink/Function-Call Subsystem/Veh_Dynamic"
+      /begin REF_MEASUREMENT
+        BP_Lim_T
+        Dri_T_request
+        MCU_Cut
+        MCU_SpdCmd
+        MCU_TorqCmd
+        Maxchange_Lim_T
+        Pwr_Lim
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Warn
+      /* Long identifier        */       "E33_VCU_simulink/Function-Call Subsystem/Warn"
+      /begin SUB_GROUP
+        S8_A_level_Warn
+        S8_B_level_Warn
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_Input
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input"
+      /begin SUB_GROUP
+        S23_APPS
+        S23_BMS_CAN_Receive
+        S23_Bpressure
+        S23_Keys
+        S23_MCU_CAN_Receive
+        S23_Self_inspection
+        S23_Sensor
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_DCDC_Ctrl
+      /* Long identifier        */       "E33_VCU_simulink/Subsystem1/DCDC_Ctrl"
+      /begin REF_MEASUREMENT
+        DCDC_MR
+        DCDC_ON
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_MCUctrl
+      /* Long identifier        */       "E33_VCU_simulink/Subsystem1/MCUctrl"
+      /begin SUB_GROUP
+        S167_MCU_CMD_CAN_Tx
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_PanelCtrl
+      /* Long identifier        */       "E33_VCU_simulink/Subsystem1/PanelCtrl"
+      /begin REF_MEASUREMENT
+        BeeperStat
+        BmsLedStat
+        ImdLedStat
+        R2D_Light
+        ReadyLEDstat
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_A_level_Warn
+      /* Long identifier        */       "E33_VCU_simulink/Function-Call Subsystem/Warn/A_level_Warn"
+      /begin REF_MEASUREMENT
+        A_level_Warn
+        BadApp1Alm
+        BadApp2Alm
+        BadMcuAlm
+        Bad_APPAlm
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_B_level_Warn
+      /* Long identifier        */       "E33_VCU_simulink/Function-Call Subsystem/Warn/B_level_Warn"
+      /begin REF_MEASUREMENT
+        B_level_Warn
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S23_APPS
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/APPS"
+      /begin SUB_GROUP
+        S24_Reliability_testing
+        S24_SCS_Wire_breakage_detection
+        S24_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        APPS1_Pos
+        APPS1_Vol_In
+        APPS2_Pos
+        APPS2_Vol_In
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S23_BMS_CAN_Receive
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/BMS_CAN_Receive"
+      /begin SUB_GROUP
+        S25_BMS_INFO_Analyze
+        S25_BMS_MAXT_Analyze
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        BMSALMCnt
+        BMSInfoCnt
+        BMSMAXTCnt
+        BMSMXVCnt
+        BMS_Online
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S23_Bpressure
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/Bpressure"
+      /begin SUB_GROUP
+        S26_SCS_Wire_breakage_detection
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        BP_F_Pos
+        BP_F_Vol_In
+        BP_R_Pos
+        BP_R_Vol_In
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S23_Keys
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/Keys"
+      /begin REF_MEASUREMENT
+        R2D_SW
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S23_MCU_CAN_Receive
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/MCU_CAN_Receive"
+      /begin SUB_GROUP
+        S28_ReceiveMessages1
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        Infomation_OK
+        MCU_Online
+        McuInfoOfflineCnt
+        McuStatelineCnt
+        State_OK
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S23_Self_inspection
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/Self_inspection"
+      /begin REF_MEASUREMENT
+        APPS1_PWR
+        APPS2_PWR
+        BP_PWR
+        I_BAT
+        I_UBR
+        PWR_5V
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S23_Sensor
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/Sensor"
+      /begin REF_MEASUREMENT
+        Angle_Vol
+        Linear_FL
+        Linear_FR
+        Linear_RL
+        Linear_RR
+        Wheel_Angle
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S167_MCU_CMD_CAN_Tx
+      /* Long identifier        */       "E33_VCU_simulink/Subsystem1/MCUctrl/MCU_CMD_CAN_Tx"
+      /begin REF_MEASUREMENT
+        VCUMCUCANOKK
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S24_Reliability_testing
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/APPS/Reliability testing"
+      /begin REF_MEASUREMENT
+        APPSUn_dif
+        APPS_Unreliable
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S24_SCS_Wire_breakage_detection
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/APPS/SCS_Wire_breakage_detection"
+      /begin REF_MEASUREMENT
+        APPS1_Disconnect
+        APPS2_Disconnect
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S24_Subsystem
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/APPS/Subsystem"
+      /begin REF_MEASUREMENT
+        APPS_Pos
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S25_BMS_INFO_Analyze
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/BMS_CAN_Receive/BMS_INFO_Analyze"
+      /begin SUB_GROUP
+        S43_Enabled_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S25_BMS_MAXT_Analyze
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/BMS_CAN_Receive/BMS_MAXT_Analyze"
+      /begin SUB_GROUP
+        S44_Enabled_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S26_SCS_Wire_breakage_detection
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/Bpressure/SCS_Wire_breakage_detection"
+      /begin REF_MEASUREMENT
+        BP_F_Disconnect
+        BP_R_Disconnect
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S28_ReceiveMessages1
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/MCU_CAN_Receive/ReceiveMessages1"
+      /begin SUB_GROUP
+        S110_Enabled_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S43_Enabled_Subsystem
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/BMS_CAN_Receive/BMS_INFO_Analyze/Enabled Subsystem"
+      /begin REF_MEASUREMENT
+        BMS_AlmLv
+        BMS_Current
+        BMS_SoC
+        BMS_Voltage
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S44_Enabled_Subsystem
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/BMS_CAN_Receive/BMS_MAXT_Analyze/Enabled Subsystem"
+      /begin REF_MEASUREMENT
+        MaxTemp
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S110_Enabled_Subsystem
+      /* Long identifier        */       "E33_VCU_simulink/Input/Input/MCU_CAN_Receive/ReceiveMessages1/Enabled Subsystem"
+      /begin REF_MEASUREMENT
+        MCU_HvVolt
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF E33_VCU_simulink.a2l */
